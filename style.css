@@ -95,7 +95,6 @@ nav a{
     .side-bar{
         display: flex;
         flex-direction: column;
-        display: block;
         background-color: white;
         z-index: 1000;
     }
