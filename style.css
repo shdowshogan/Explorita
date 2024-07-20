@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Poppins;
+    color: white;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    margin: 0;
+    top: 0;
+    z-index: 88;
+    background-color: #2796fd;
+    color: white;
+    box-shadow: 0 0 17px 10px rgba(0,0,0,0.2);
+    /* min-width: 200px; */
+    width: 100vw;
+    position: fixed;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+}
+
+.company-name{
+    font-size: 1.9rem;
+    font-family: 'Playwrite HR Lijeva';
+    font-weight: 700;
+}
+
+.name img{
+    height: 5rem;
+}
+
+.three-lines img{
+    position: absolute;
+    z-index: 89;
+    height: 3rem;
+    right: 0;
+    top: 2.2rem;
+    display: none;
+}
+
+nav{
+    display: flex;
+    gap: 70px;
+    padding-right: 30px;
+    font-size: 1.4rem;
+    margin: 0;
+    max-width: 100%;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-family: Poppins;
+}
+
+.close-button{
+    height: 2rem;
+    width: 2rem;
+}
+
+
+@media (max-width : 1160px){
+    nav{
+        display: none;
+    }
+    .three-lines img{
+        display: block;
+        right: 2rem;
+        position: fixed;
+    }
+
+    .name img{
+        height: 4rem;
+    }
+    .company-name{
+        font-size: 1.5rem;
+    }
+    .img-content{
+        font-size: 0.5rem;
+    }
+
+    .side-bar{
+        display: flex;
+        flex-direction: column;
+        display: block;
+        background-color: white;
+        z-index: 1000;
+    }
+}
+
+.side-bar{
+    z-index: 90;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: #2796fd7c;
+    width: 50vw;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.side-bar-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    
+}
+
+.side-bar a{
+    z-index: 1000;
+    color: white;
+}
+
+.slider-frame{
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide{
+    position: relative;
+    box-sizing: border-box;
+    min-width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+.slide img{
+    width: 100%;
+    object-fit: cover;
+    height: 80vh;
+    background-repeat: no-repeat;
+}
+.img-content{
+    max-width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-family: Poppins;
+    color: white;
+    font-size: 2rem;
+}
+
+.img-content p{
+    margin-top: 1.4rem;
+}
+
+@media (max-width:1400px){
+    .img-content h1{
+        font-size: 2rem;
+    }
+    .img-content p{
+        font-size: 1rem;
+    }
+    .img-content{
+        max-width: 80vw;
+    }
+
+}
+
+/* @-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left:2400px;}
+    50% {left:2400px;}
+    60% {left:1200px;}
+    70% {left:1200px;}
+    80% {left:0px;}
+    90% {left:0px;}
+    100% {left:0px;}
+}
+
+.slide-images{
+    margin: 0 0 0 0;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    -webkit-animation-duration: 30s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+} */
+
+@keyframes slide_animation {
+    0%, 10% { left: 0; }
+    20%, 30% { left: -100%; }
+    40%, 50% { left: -200%; }
+    60%, 70% { left: -100%; }
+    80%, 90%, 100% { left: 0; }
+}
+
+.slide-images {
+    display: flex;
+    position: relative;
+    width: 100%; 
+    animation: slide_animation 20s infinite ;
+}
+
+.search{
+    background-color: #2796fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 30vh;
+}
+
+.search h1{
+    font-size: 3rem;
+}
+
+@media (max-width:1400px){
+    .search h1{
+        font-size: 2rem;
+    }
+
+    .search input{
+        font-size: 1rem;
+    }
+}
+.search input{
+    height: 4rem;
+    width: 60%;
+    min-width: 20rem;
+    font-size: 1.6rem;
+    margin-top: 1.7rem;
+    padding-left: 2rem;
+    border-radius: 2rem;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+.search input:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+.three-cards{
+    margin-bottom: -100px;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    gap: 10%;
+    background-color: rgb(235, 235, 235);
+    transform: translate(0,-7rem);
+    height: 40vh;
+    max-width: 100%;
+    padding: 10rem;
+}
+.card{
+    color: black;
+    max-width: 20rem;
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
+    padding: 1rem;
+    height: 15rem;
+    background-color: white;
+}
+
+.card img{
+    height: 3rem;
+    width: 3rem;
+}
+
+@media (max-width:1400px){
+    .card-container{
+        flex-direction: column;
+        padding-top: 5rem;
+        gap: 3rem;
+        height: max-content;
+    }
+}
+
+.popular-places{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.place-card img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 2rem;
+    
+}
+
+.place-card h3{
+    position: absolute;
+    bottom: 1rem;
+    color: white;
+    left: 1rem;
+}
+
+.popular-place-name{
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+.place-card{
+    border-radius: 10rem;
+    position: relative;
+}
+
+.places{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top:3rem;
+}
+
+
+@media (max-width:1400px){
+    .places{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin-top:3rem;
+    }
+
+    .place-card img{
+        width: 20rem;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 2rem;        
+    }
+
+    .popular-place-name{
+        margin-top: 3rem;
+        font-size: 1.3rem;
+    }
+    
+    
+}

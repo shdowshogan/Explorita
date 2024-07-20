@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="icon/palm.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="name">
+                <img src="icon/palm.png" alt="Palm tree">
+                <span>
+                    <p class="company-name">
+                        Explorita
+                    </p>
+                </span>
+            </div>
+            <nav>
+                <a href="#home">
+                    Home
+                </a>
+                <a href="#search">
+                    Search
+                </a>
+                <a href="#popular-places">
+                    Popular Places
+                </a>
+                <a href="#gallery">
+                    Gallery
+                </a>
+                <a href="#contact">
+                    Contact
+                </a>
+            </nav>
+        </div>
+        <div class="side-bar">
+            <nav class="side-bar-nav">
+                <img onclick="hideSidebar()" class="close-button" src="icon/close.png" alt="Close Button">
+                <a href="#home">
+                    Home
+                </a>
+                <a href="#search">
+                    Search
+                </a>
+                <a href="#popular-places">
+                    Popular Places
+                </a>
+                <a href="#gallery">
+                    Gallery
+                </a>
+                <a href="#contact">
+                    Contact
+                </a>
+            </nav>
+        </div>
+    </header>
+    <div class="three-lines" onclick="showSidebar()">
+        <img  src="icon/menu.png" alt="3 lines icon">
+    </div>
+    <div class="slider-frame" id="home">
+        <div class="slide-images">
+            <div class="slide">
+                <div class="image">
+                    <img src="images/premium_photo-1671358446946-8bd43ba08a6a.avif" alt="Beach with palm trees">
+                </div>
+                
+                <div class="img-content">
+                    <span><h1>Group and Individual Getaways</h1></span>
+                    <span><p>Lorem ipsum dolor sit amet consectetur.</p></span>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="image">
+                    <img src="images/karsten-winegeart-47n0p88azY4-unsplash.jpg" alt="Camping in a forest">
+                </div>
+                
+                <div class="img-content">
+                    <span><h1>All landscapes covered</h1></span>
+                    <span><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus molestias excepturi alias quibusdam nihil numquam.</p></span>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="image">
+                    <img src="images/pan-xiaozhen-qZtSuZvdob0-unsplash.jpg" alt="Black Beach">
+                </div>
+                        
+                <div class="img-content">
+                    <span><h1>We work with all</h1></span>
+                    <span><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus molestias excepturi alias quibusdam nihil numquam.</p></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="search" id="search">
+        <span><h1>Search Destinations</h1></span>
+        <input type="text" placeholder="Cancun, Bali, etc....">
+    </section>
+    <section class="three-cards">
+        <div class="card-container">
+            <div class="card">
+                <img src="icon/location.png" alt="Location Pin">
+                <span><h1>Pick Where</h1></span>
+                <span><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus</p></span>
+            </div>
+            <div class="card">
+                <img src="icon/store.png" alt="Shop Icon">
+                <span><h1>Travel Shop</h1></span>
+                <span><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus</p></span>
+            </div>
+            <div class="card">
+                <img src="icon/airplane.png" alt="Airplane Icon">
+                <span><h1>Fly Cheap</h1></span>
+                <span><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus</p></span>
+            </div>
+        </div>
+        
+    </section>
+    <section class="popular-places" id="popular-places">
+        <div class="popular-place-name">
+            <h1>Popular Places</h1>
+        </div>
+        <div class="places">
+            <div class="place-card">
+                <img src="https://cdn.vallarta-adventures.com/sites/default/files/2019-01/cancun-about-weather%20%281%29.jpg" alt="Cancun Mexico">
+                <span><h3>Cancun, Mexico</h3></span>
+            </div>
+            <div class="place-card">
+                <img src="https://www.cheapcaribbean.com/siteassets/content/images/destinations/bahamas/region-page/Destination-Bahamas-BannerImage.jpg" alt="Bahamas">
+                <span><h3>The Bahamas</h3></span>
+            </div>
+            <div class="place-card">
+                <img src="https://i.natgeofe.com/n/b42dd25c-0352-4ab9-9e38-64117055c4e6/waterfront-sunny-boat-halifax-nova-scotia_3x2.jpg" alt="Nova Scotia">
+                <span><h3>Nova Scotia, Canada</h3></span>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.side-bar')
+            sidebar.style.display = 'block';
+        }
+
+        function hideSidebar(){
+            const hideSidebar = document.querySelector('.side-bar')
+            hideSidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
